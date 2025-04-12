@@ -5,12 +5,12 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.pos.testcases.CreateNewVendor" />
-<!-- 			<class name="com.pos.testcases.EditVendor" />
-			<class name="com.pos.testcases.DeleteVendor" /> -->
+			<class name="com.pos.testcases.EditVendor" />
+			<class name="com.pos.testcases.DeleteVendor" />
 
 		</classes>
 	</test>
-<!-- 	<test name="firefox" parallel="true" thread-count="3">
+	<test name="firefox" parallel="true" thread-count="3">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.pos.testcases.CreateNewProduct" />
@@ -28,6 +28,6 @@
 			<class name="com.pos.testcases.DeleteCustomer" />
 
 		</classes>
-	</test> -->
+	</test>
 
 </suite>

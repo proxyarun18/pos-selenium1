@@ -47,7 +47,7 @@ public class DriverInstance{
 		case "firefox":
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			firefoxOptions.addArguments("--disable-notifications"); 
-			firefoxOptions.setAcceptInsecureCerts(true);
+			//firefoxOptions.setAcceptInsecureCerts(true);
 			DesiredCapabilities desiredCap = new DesiredCapabilities();
 			desiredCap.setBrowserName("firefox");
 			desiredCap.setPlatform(Platform.LINUX);

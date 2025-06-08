@@ -25,3 +25,9 @@ To run the Selenium tests using the Docker image, use the following command:
 ```sh
 docker run -d pos-selenium-test:latest
 ```
+
+To View test reports 
+
+```sh 
+docker run -v $(pwd)/reports:/selenium/reports --name pos-sel-test-container pos-selenium-test:latest
+```

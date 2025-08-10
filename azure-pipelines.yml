@@ -19,12 +19,13 @@ stages:
         steps:
           - checkout: self
 
-          # Run tests first
+          # Run tests but do NOT fail the pipeline on test failures
           - script: |
               mvn clean verify
             displayName: Run Tests
+            continueOnError: true
 
-          # Run SonarQube scan even if tests failed
+          # Run SonarQube scan always, even if previous step failed
           - script: |
               mvn sonar:sonar \
                 -Dsonar.projectKey=$(sonarProjectKey) \
@@ -32,4 +33,3 @@ stages:
                 -Dsonar.host.url=$(sonarHostUrl) \
                 -Dsonar.token=$(sonarToken)
             displayName: Run SonarQube Scan
-            continueOnError: true
